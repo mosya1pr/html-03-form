@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+    <style type="text/css">
+    * {
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
+        font-family: Helvetica,Arial,sans-serif;
+    }
+    .content {
+        margin: 0 auto;
+        display: block;
+        max-width: 700px;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 36px;
+    }
+    h1.title {
+        text-align: center;
+    }
+    form {
+        padding: 20px;
+    }
+    form fieldset {
+        border: 1px solid #bebebe;
+        margin: 10px 0;
+    }
+    legend {
+        font-weight: 700;
+    }
+    form div {
+        margin: 10px 0;
+    }
+    label {
+        margin-bottom: 5px;
+        display: inline-block;
+    }    
+    input, select, textarea {
+        display: block;
+        width: 100%;
+        color: #555;
+        border: 1px solid #ccc;
+        padding: 6px 12px;
+        height: 34px;
+        line-height: 1.42857143;
+        background: #FFF;
+    }
+    textarea {
+        height: inherit;
+    }
+    input.radio {
+        display: inline-block;
+        height: 16px;
+        width: inherit;
+        position: relative;
+        top: 4px;
+    }
+    input.checkbox {
+        display: inline-block;
+        height: 16px;
+        width: inherit;
+        position: relative;
+        top: 4px;
+    }    
+    .req:after {
+        content: ' *';
+        color: #FF0000;
+    }
+    .block {
+        display: block;
+    }
+    .m-n {
+        margin: 0;
+    }   
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">Опитування по роботі сайту</h1>
+        <form method="post" action="https://formspree.io/mosicka_rudky@ukr.net">
+            <fieldset>
+                <legend>Особисті дані</legend>
+
+                <div>
+                    <label>Ваша стать</label>
+                    <div class="m-n">
+                        <label><input class="radio" type="radio" name="gender" value="male">Чоловіча</label>
+                        <label><input class="radio" type="radio" name="gender" value="female">Жіноча</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Ваш вік</label>
+                    <div class="m-n">
+                        <label><input class="radio" type="radio" name="age" value="18-25">18-25</label>
+                        <label><input class="radio" type="radio" name="age" value="25-30">25-30</label>
+                        <label><input class="radio" type="radio" name="age" value="30-40">30-40</label>
+                        <label><input class="radio" type="radio" name="age" value="40-50">40-50</label>
+                        <label><input class="radio" type="radio" name="age" value="50+">50+</label>
+                    </div>
+                </div>                                
+                
+            </fieldset>
+            <fieldset>
+                <legend>Дані по сайту</legend>
+
+                <div>
+                    <label>Ви відвідуєте наш сайт вперше?</label>
+                    <div class="m-n">
+                        <label><input class="radio" type="radio" name="visiting" value="1">Так</label>
+                        <label><input class="radio" type="radio" name="visiting" value="0">Ні</label>
+                    </div>
+                </div> 
+
+                <div>
+                    <label>Яка основна причина візиту на сайт?</label>                    
+                    <input type="text" name="reason">
+                </div> 
+
+                <div>
+                    <label>Ви знайшли те що шукали?</label>
+                    <div class="m-n">
+                        <label><input class="radio" type="radio" name="found" value="1">Так</label>
+                        <label><input class="radio" type="radio" name="found" value="0">Ні</label>
+                    </div>
+                </div> 
+                
+                <div>
+                    <label>Оцініть сайт</label>
+                    <select name="rating">
+                        <option value='1'>☆</option>
+                        <option value='2'>☆☆</option>
+                        <option value='3'>☆☆☆</option>
+                        <option value='4'>☆☆☆☆</option>
+                        <option value='5'>☆☆☆☆☆</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label>Розкажіть, що Ви шукали?</label>
+                    <textarea name="what_search" rows="5"></textarea>
+                </div>
+                
+                <div>
+                    <label>Яка вірогідність, що Ви відвідаєте сайт знову?</label>
+                    <div class="m-n">
+                        <label><input class="radio" type="radio" name="visit_again" value="0">Не відвідаю</label>
+                        <label><input class="radio" type="radio" name="visit_again" value="1">Навряд чи</label>
+                        <label><input class="radio" type="radio" name="visit_again" value="2">Можливо</label>
+                        <label><input class="radio" type="radio" name="visit_again" value="3">Скоріш за все, відвідаю</label>
+                        <label><input class="radio" type="radio" name="visit_again" value="4">Неодмінно відвідаю</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Ваші побажання по покращеню сайту</label>
+                    <textarea name="wishes" rows="5"></textarea>
+                </div>
+            </fieldset>            
+
+
+            <div>
+                <button type="submit">Відправити</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
